@@ -53,12 +53,14 @@ ui <- fluidPage(shinyUI(
     dashboardBody(
       tabItems(
         tabItem(tabName = "map",
-                fluidRow(box(title = "How to use the map",
-                             footer = "The map is shaded from white to green with dark green values indicating a 
-                             higher score for the characteristic in 'Select Item to Display' in the menu bar on the 
-                             left. Those characteristics are Happiness.Rank, Economy..GDP.per.Capita., Family, 
-                             Health..Life.Expectancy., Freedom, Generosity, Trust..Government.Corruption, and 
-                             Dystopia.Residual", width=12)),
+                fluidRow(box(title = "What is this map showing me and how do I use it?",
+                             footer = "The below map is an interactive map to look at the overall Country Happiness 
+                             ranking as well as the characterisics that make up its overall ranking. The map is 
+                             shaded from red to green with dark green values indicating a higher score and dark red 
+                             indicating a low score for the characteristic in 'Select Item to Display' in the menu 
+                             bar on the left. Those characteristics are Happiness.Rank, Economy..GDP.per.Capita., 
+                             Family, Health..Life.Expectancy., Freedom, Generosity, Trust..Government.Corruption, 
+                             and Dystopia.Residual", width=12)),
                 # gvisGeoChart
                 fluidRow(box(htmlOutput("map"),width = 12)
                          )),
